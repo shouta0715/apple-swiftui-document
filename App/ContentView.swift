@@ -1,21 +1,17 @@
-//
-//  ContentView.swift
-//  Landmarks
-//
-//  Created by k21047kk on 2024/12/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Link(destination: URL(string: "https://www.apple.com")!) {
+            HStack(spacing: 16) {
+                Image(systemName: "applelogo")
+                Text("Apple Store")
+            }.font(.largeTitle).foregroundColor(.white).padding().padding(
+                .horizontal
+            ).background(
+                Capsule()
+                    .fill(Color.blue))
         }
-        .padding()
     }
 }
 
